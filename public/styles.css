@@ -1,0 +1,154 @@
+body {
+  font-family: 'Gowun Dodum', cursive;
+  background-color: #8aa6a3;
+  min-height: 70vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(198, 1%, 29%);
+  text-align: center;
+  font-size: 130%;
+}
+
+.todo-container {
+  width: 500px;
+
+  min-height: 500px;
+  max-width: 500px;
+  min-width: 250px;
+  background: #f1f5f8;
+  background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+  background-size: 25px 25px;
+  border-radius: 20px;
+  box-shadow: 4px 3px 7px 2px #00000040;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+ul {
+  padding-inline-end: 40px;
+}
+.navbar-nav {
+  padding-inline-end: 0;
+}
+.item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.item button {
+  margin-left: auto;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  appearance: none;
+  outline: 0;
+}
+
+.item-text {
+  border: none;
+  background-color: transparent;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form input {
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 0.7rem;
+  border-bottom-right-radius: 15px 3px;
+  border-bottom-left-radius: 3px 15px;
+  border: solid 3px transparent;
+  border-bottom: dashed 3px #4c5958;
+  font-size: 1rem;
+  color: hsla(260, 2%, 25%, 0.7);
+  width: 70%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.login-container {
+  margin: 10% auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.login-container h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.login-form {
+  padding: 20px 0;
+}
+
+.login-form input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 300px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+.login-form > button {
+  appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 0;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 5px;
+  background-color: #bfbfbf;
+  box-shadow: 4px 3px 7px 2px #00000040;
+}
+
+.navbar-nav li button:hover {
+  color: white !important;
+}
+
+.navbar-nav li button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  appearance: none;
+  outline: 0;
+}
+
+.form button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  appearance: none;
+  outline: 0;
+}

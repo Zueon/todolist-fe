@@ -1,5 +1,6 @@
-import { API_BASE_URL } from '../app-config';
-const axios = require('axios').default;
+// import { API_BASE_URL } from '../app-config';
+const { API_BASE_URL } = require('../app-config');
+const axios = require('axios');
 const ACCESS_TOKEN = 'ACCESS_TOKEN';
 const USERNAME = 'USERNAME';
 
@@ -21,12 +22,15 @@ export async function call(api, method, request) {
     if (accessToken && accessToken !== null) {
       options.headers['Authorization'] = `Bearer ${accessToken}`;
     }
+    console.log('options.url' + options.url);
+    console.log('APIBASE' + API_BASE_URL);
+    console.log('API' + api);
 
     const response = await axios(options);
     return response;
   } catch (error) {
     if (error.response.status === 403) {
-      window.location.href = '/login';
+      window.location = '/login';
     }
   }
 }
@@ -35,7 +39,7 @@ export async function signup(userDTO) {
   const response = await call('/auth/signup', 'POST', userDTO);
   console.log(response);
   if (response.status === 200) {
-    window.location.href = '/login';
+    window.location = '/login';
   }
 }
 
@@ -45,12 +49,12 @@ export async function signin(userDTO) {
   if (accessToken) {
     localStorage.setItem(ACCESS_TOKEN, accessToken);
     localStorage.setItem('USERNAME', response.data.username);
-    window.location.href = '/';
+    window.location = '/';
   }
 }
 
 export function signout() {
   localStorage.setItem(ACCESS_TOKEN, null);
   localStorage.setItem(USERNAME, null);
-  window.location.href = '/login';
+  window.location = '/login';
 }

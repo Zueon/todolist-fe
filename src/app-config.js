@@ -5,7 +5,7 @@ const hostname = window && window.location && window.location.hostname;
 if (hostname === 'localhost') {
   backendHost = 'http://localhost:8080';
 } else {
-  backendHost = 'http://todoapp-be-prod.ap-northeast-2.elasticbeanstalk.com';
+  backendHost = 'https://todoapi.zueon.link';
 }
 
 export const API_BASE_URL = `${backendHost}`;
